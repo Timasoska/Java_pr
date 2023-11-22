@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Магистратура</title>
+    <style>
+        .navbar {
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Магистратура на Java Spring</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Не фишинг</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/advantages">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">Карьерные возможности</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/python">Пипон</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Авторизация</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .card {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title">Авторизация</h3>
+            <form>
+                <div class="/about">
+                    <label for="cardNumber">Номер карты</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Введите номер карты" required>
+                </div>
+                <div class="/about">
+                    <label for="expirationDate">Срок действия</label>
+                    <input type="text" class="form-control" id="expirationDate" placeholder="ММ/ГГ" required>
+                </div>
+                <div class="/about">
+                    <label for="cvv">Имя фамилия</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="TIMOFEY RUDAKOV(example)" required>
+                </div>
+                <div class="/about">
+                    <label for="promoCode">CVV</label>
+                    <input type="text" class="form-control" id="promoCode" placeholder="Введите код">
+                </div>
+                <button type="submit" class="btn btn-success">Войти</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container py-3">
+    <p class="text-center">©При поддержке СБЕРБАНК. Все права защищены.</p>
+</div>
+<!--<div th:each="el : ${users}" class="alert alert-info mt-2">
+    <h3 th:text="${el.number}"></h3>
+    <p th:text="${el.cvv}"></p>
+</div>-->
+</body>
+</html>

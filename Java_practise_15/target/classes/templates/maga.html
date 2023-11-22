@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Магистратура</title>
+    <style>
+        .navbar {
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">Магистратура на Java Spring</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">Не фишинг</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/advantages">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/career">Карьерные возможности</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/python">Пипон</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+
+<div class="container">
+    <section id="about" class="mt-5">
+        <h2 class="mb-4" >О курсе</h2>
+        <p th:text="#{about.description}">Магистратура на Java Spring предлагает углубленное изучение этого мощного фреймворка для веб-разработки. За 2 года обучения вы освоите все основные компоненты и инструменты Spring и научитесь создавать высокопроизводительные веб-приложения.</p>
+        <a class="btn btn-primary" href="/about">Узнать больше</a>
+    </section>
+
+    <section id="advantages" class="mt-5">
+        <h2 class="mb-4">Преимущества</h2>
+        <ul class="list-group">
+            <li th:each="advantage : ${advantages}" class="list-group-item" th:text="${advantage}"></li>
+        </ul>
+        <a class="btn btn-primary" href="/advantages">Узнать больше</a>
+    </section>
+
+    <section id="career" class="mt-5">
+        <h2 class="mb-4">Карьерные возможности</h2>
+        <p th:text="#{career.description}">После окончания курса по магистратуре на Java Spring, у вас будет больше шансов на трудоустройство в крупных IT-компаниях и стартапах. Вы сможете работать веб-разработчиком, программистом Java Spring, архитектором веб-приложений и многими другими.</p>
+        <a class="btn btn-primary" href="/career">Узнать больше</a>
+    </section>
+
+    <section id="testimonials" class="mt-5">
+        <h2 class="mb-4">Отзывы студентов</h2>
+
+        <section id="testimonal">
+            <div class="testimonial">
+                <p>"Я очень благодарен, что выбрал этот университет. Преподаватели здесь высококвалифицированные и открытые для общения. Моя учебная программа дала мне все необходимые знания и навыки для достижения профессиональных целей" - Иван, студент нашего инженерного факультета.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Университет создает атмосферу академической гармонии, командной работы и творческого развития. Здесь я нашел своих наставников и друзей, с которыми вместе решаем сложные задачи и воплощаем свои идеи в реальность" - Анна, студентка нашего художественного факультета.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Университет предлагает широкий выбор учебных программ и гибкое расписание, что позволяет мне успешно совмещать учебу с работой. Преподаватели всегда готовы помочь и поддержать студентов в их успехах" - Максим, студент нашего экономического факультета.</p>
+            </div>
+            <div class="testimonial">
+                <p>"Я с удовольствием учусь в этом университете. Здесь у меня есть возможность применить теоретические знания на практике через участие в исследовательских проектах и стажировках в хорошо известных компаниях. Это дает мне большое преимущество на рынке труда" - Ольга, студентка нашего информационного факультета.</p>
+            </div>
+        </section>
+         <div class="card-deck">
+            <div class="card" th:each="testimonial : ${testimonials}">
+                <div class="card-body">
+                    <p class="card-text" th:text="${testimonial.comment}"></p>
+                    <cite class="card-footer" th:text="${testimonial.author}"></cite>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
